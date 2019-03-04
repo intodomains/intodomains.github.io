@@ -1,0 +1,14 @@
+include templates/_inline-svg
+include templates/_mixins
+extends templates/_layout
+
+block config
+  - var pageTitle = 'Homepage'
+
+block main
+  main.index
+    include templates/index/_section-hero-index
+    include templates/index/_section-info-index
+
+block scripts-bottom
+  script(src="js/index.js")

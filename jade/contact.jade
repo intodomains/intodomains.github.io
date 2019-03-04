@@ -1,0 +1,13 @@
+include templates/_mixins
+extends templates/_layout
+
+block config
+  - var pageTitle = 'Contact page'
+
+block main
+  main.contact-page
+    +logo-block({style: 'logo-block--dark', mail: false})
+    include templates/_form
+
+block scripts-bottom
+  script(src="js/index.js")

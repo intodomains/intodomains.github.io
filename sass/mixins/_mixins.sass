@@ -1,0 +1,72 @@
+=shadow-default
+  box-shadow: 2px 20px 25px -20px #dddddd
+
+=shadow-mid
+  box-shadow: 2px 20px 25px -20px #c1b9b9
+
+=shadow-dark
+  box-shadow: 2px 30px 25px -20px #988f8f
+
+=max($pixel)
+  @media(max-width: #{$pixel}px)
+    @content
+
+=min($pixel)
+  @media(min-width: #{$pixel}px)
+    @content
+
+=max-min($pixel1,$pixel2)
+  @media (max-width: #{$pixel1}px), (min-width: #{$pixel2}px)
+    @content
+
+=min-max($pixel1,$pixel2)
+  @media (min-width: #{$pixel1}px) and (max-width: #{$pixel2}px)
+    @content
+
+=button($p: 0, $fz: 1rem)
+  cursor: pointer
+  border: none
+  background: $blue
+  color: $white
+  padding: $p
+  border-radius: 30px
+  margin-left: auto
+  display: inline-block
+  font-weight: 600
+  font-size: $fz
+
+
+=radio($padding: 1.3rem 2.73rem, $margin: 3rem)
+  display: inline-block
+  margin-top: $margin
+  cursor: pointer
+  user-select: none
+  margin-left: $margin / 1.8
+  margin-right: $margin / 1.8
+  position: relative
+  &:focus
+    outline: none
+  .text
+    background: $gray-light
+    width: 100%
+    height: 100%
+    border-radius: 20rem
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    display: flex
+    align-items: center
+    justify-content: center
+  .text-invisible
+    opacity: 0
+    padding: $padding
+    display: block
+  input
+    display: none
+    &:checked
+      & ~ .text
+        color: #fff
+        font-weight: 600
+        background: $green
+

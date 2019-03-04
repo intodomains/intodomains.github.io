@@ -1,0 +1,192 @@
+.index
+  .hero
+    background: $gray-light
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 21rem 0
+    position: relative
+
+    .title
+      font-size: 10rem
+      width: 110rem
+      text-align: center
+      margin-top: 0
+      position: relative
+      z-index: 10
+      font-weight: 300
+      +max(1200)
+        font-size: 8rem
+        width: 90rem
+      +max(991)
+        width: calc(100% - 7.4rem)
+        font-size: 7rem
+      +max(776)
+        font-size: 6rem
+      +max(550)
+        font-size: 5rem
+
+    .background
+      position: absolute
+      top: 0
+      bottom: 0
+      right: -1rem
+      margin: auto
+      height: 85%
+      +max(550)
+        display: none
+      path,
+      rect
+        fill: $white
+        &.blink
+          animation: blink 1.2s steps(1) infinite
+          @keyframes blink
+            0%
+              fill: $white
+            50%
+              fill: transparent
+
+    form
+      margin-top: 11rem
+      font-size: 10px
+      width: 80em
+      +max(991)
+        font-size: 8px
+      +max(776)
+        font-size: 6px
+      +max(650)
+        width: calc(100% - 7.4rem)
+      label
+        font-size: 2.5rem
+        position: relative
+        z-index: 10
+        cursor: pointer
+        display: block
+        text-align: center
+        font-weight: 300
+        line-height: 1.3em
+        +max(550)
+          margin: auto
+          margin-bottom: 6rem
+          width: 70%
+        +max(450)
+          width: 100%
+
+      .input-wrapper
+        +shadow-default
+        transition: .3s ease-in-out box-shadow
+        position: relative
+        z-index: 10
+        background: $white
+        margin-top: 2.5em
+        padding: 3em
+        width: 100%
+        border-radius: 50px
+        display: flex
+        justify-content: space-between
+
+        &:focus-within,
+        &:hover
+          +shadow-mid
+
+      input
+        color: $gray-mid
+        border: none
+        line-height: 0
+        font-size: 2.5em
+        padding-left: 1em
+        padding-right: 2.5em
+        margin-right: 2.5em
+        padding-bottom: 0.1em
+        width: 100%
+        border-radius: 50px
+
+        &::selection
+          background: $blue
+          color: $white
+
+        &::placeholder
+          color: $gray-mid
+
+        &:focus
+          outline: none
+
+          &::placeholder
+            color: transparent
+
+      button
+        +button($p: 0.7em 3em 0.8em, $fz: 2em)
+
+  .info
+    background: $blue
+    color: $white
+    position: relative
+    padding-top: 10rem
+    padding-bottom: 20rem
+    +max(776)
+      padding-bottom: 10rem
+
+    .column
+      width: 88rem
+      margin-left: auto
+      font-weight: 300
+      padding-right: 20rem
+      +max(1200)
+        margin: auto
+        width: 68rem
+        padding-right: 5rem
+      +max(650)
+        width: calc(100% - 10rem)
+        padding-right: 0
+
+
+    .heading
+      margin-top: 10rem
+      font-size: 5rem
+      font-weight: 300
+      line-height: 1.05em
+      width: 70rem
+      +max(650)
+        width: 100%
+
+    .subheading
+      margin-top: 0
+      margin-bottom: 3rem
+      font-size: 2.2rem
+      font-weight: 300
+
+    .text
+      margin: 0
+      font-size: 2.8rem
+      line-height: 1.5em
+      width: 60rem
+      +max(550)
+        width: 100%
+
+    .row
+      margin-top: 10rem
+      +m(flex)
+        display: flex
+      &:nth-child(2)
+        opacity: 1
+      &:nth-child(3)
+        opacity: 1
+      &:nth-child(4)
+        opacity: 1
+
+    .column-left
+      width: 60%
+
+    .column-right
+      width: 40%
+      display: flex
+      justify-content: flex-end
+
+    .logo
+      margin-top: 1rem
+      margin-bottom: 1rem
+      path
+        fill: $white
+
+    .slogan
+      font-size: 2rem

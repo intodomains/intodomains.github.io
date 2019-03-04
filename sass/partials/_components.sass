@@ -1,0 +1,70 @@
+.logo-block
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 3.7rem
+  +m(dark)
+    .logo
+      path
+        fill: $blue !important
+    .mail
+      line
+        stroke: $blue !important
+  +m(light)
+    .logo
+      path
+        fill: $white !important
+    .mail
+      line,
+      polyline,
+      rect
+        stroke: $white !important
+  +m(wrapper)
+    padding-top: 6rem
+    padding-left: 0
+    padding-right: 0
+    +max(776)
+      padding-top: 3rem
+    +max(550)
+      padding-top: 4rem
+  .logo, .mail
+    font-size: 0
+    cursor: pointer
+    svg
+      display: block
+
+  .logo
+    width: 17rem
+
+  .mail
+    width: 3.1rem
+    transform: translateX(-1rem)
+
+  .buy
+    +button($p: .6rem 2.1rem, $fz: 1.6rem)
+  svg
+    height: auto
+    width: 100%
+
+.arrow
+  display: block
+  cursor: pointer
+  +m(home)
+    width: 12.5rem
+    height: 12.5rem
+    circle,
+    line,
+    polyline
+      fill: $white
+  +m(product)
+    width: 12.5rem
+    height: 12.5rem
+    circle,
+    line,
+    polyline
+      stroke: $gray-mid
+

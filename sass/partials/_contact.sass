@@ -1,0 +1,138 @@
++b(contact-page)
+  overflow: hidden
+  .logo-block
+    +max(991)
+      justify-content: center
+
++b(form)
+  $margin: 3rem
+  $padding: 1.5rem
+  margin-top: 10rem
+  .wrapper
+    width: 63rem
+    margin: auto
+    +max(991)
+      width: 53rem
+    +max(776)
+      padding-left: $padding * 2
+      padding-right: $padding * 2
+    +max(500)
+      width: 100%
+
+  +e(title)
+    //
+    font-size: 4rem
+    margin-top: 7vw
+    line-height: 5rem
+    +max(400)
+      text-align: center
+    +max(320)
+      font-size: 4rem
+    +max(270)
+      font-size: 3rem
+
+  +e(form)
+    display: flex
+    flex-wrap: wrap
+    color: $gray
+    margin-top: 6rem
+    padding-bottom: 20vw
+
+  +e(input)
+    margin: 0
+    border: none
+    background: $gray-light
+    padding: 1.5rem 5rem 1.5rem 1.5rem
+    font-size: 1.8rem
+    font-family: "Montserrat", sans-serif
+    color: $gray
+    +m(company)
+      width: 100%
+    +m(name)
+      width: 100%
+      margin-top: $margin
+    +m(email)
+      width: 100%
+      margin-top: $margin
+
+  +e(row)
+    width: 100%
+
+    +m(message)
+      margin-top: $margin * 3
+      position: relative
+      &:focus-within
+        &:after
+          bottom: 1px
+          right: 1px
+      &:after
+        pointer-events: none
+        content: ""
+        display: block
+        position: absolute
+        bottom: 0
+        right: 0
+        border-width: 5px
+        border-style: solid
+        border-color: $gray-dark
+        border-top-color: transparent
+        border-left-color: transparent
+
+    +m(heading)
+      margin-top: $margin * 2.5
+      text-align: center
+
+    +m(checkbox)
+      -webkit-tap-highlight-color: transparent
+      user-select: none
+      margin-left: -$margin / 2
+      margin-right: -$margin / 2
+      width: calc(100% + #{$margin})
+      display: flex
+      flex-wrap: wrap
+      +max(991)
+        width: 100%
+        margin-left: 0
+        margin-right: 0
+        justify-content: center
+
+    +m(submit)
+      margin-top: $margin
+      display: flex
+      justify-content: flex-end
+
+  +e(heading)
+    margin-top: 0
+    font-size: 2.5rem
+
+  +e(checkbox)
+    +radio
+
+  +e(message)
+    width: 100%
+    min-height: 15rem
+    background: $gray-light
+    resize: vertical
+    border: none
+    font-size: 1.8rem
+    font-family: "Montserrat", sans-serif
+    padding: $padding $padding * 3 $padding $padding
+    display: block
+    overflow: visible
+    height: auto !important
+
+  +e(important)
+    background-image: url("../img/contact-important.svg")
+    background-repeat: no-repeat
+    background-size: 2.8rem
+    background-position: calc(100% - 1.2rem) 1.2rem
+
+  +e(button)
+    transform: translateX(5px)
+    +button($p: 1.1rem 2.3rem, $fz: 2rem)
+
+  +g(input, message)
+    &:focus
+      outline: 1px solid $green
+
+

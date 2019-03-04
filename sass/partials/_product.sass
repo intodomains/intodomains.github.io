@@ -1,0 +1,346 @@
+.product
+  --wrapper: 1100px
+  background: $white
+  +max(1200)
+    --wrapper: calc(767px + 3rem)
+  +max(991)
+    --wrapper: calc(630px + 3rem)
+  +max(767)
+    --wrapper: calc(100% - 8rem)
+  +max(550)
+    --wrapper: calc(100% - 10rem)
+
+  .wrapper
+    width: var(--wrapper)
+    position: relative
+    margin: auto
+
+  .hero
+    background: $gray-light
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-bottom: 18rem
+
+    .title
+      padding-top: 18rem
+      font-size: 5rem
+      text-align: center
+      font-weight: 300
+      line-height: 6rem
+      margin-top: 0
+      +max(550)
+        padding-top: 15rem
+
+    strong
+      //
+      font-weight: bold
+
+    .price-row
+      color: $blue
+      height: 10rem
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-top: 4rem
+      +max(767)
+        flex-direction: column
+        height: auto
+        padding: 5rem 0 2rem
+
+    .year
+      position: absolute
+      bottom: 0
+      font-size: 1.2rem
+      width: 100%
+      left: 0
+      text-align: center
+      font-weight: 500
+      transform: translateY(calc(100% + 0.5rem))
+      +max(767)
+        bottom: auto
+        top: 0
+        transform: translateY(calc(-100% - 0.5rem))
+
+    .divider
+      border: 1px solid currentColor
+      z-index: 6
+      position: relative
+
+      &.divider-normal
+        width: 60px
+
+      &.divider-small
+        width: 30px
+        +max(767)
+          order: 1
+          width: auto
+          height: 22px
+
+    .price-item
+      font-weight: 400
+      letter-spacing: -0.5px
+      border-radius: 50px
+      border: 2px solid currentColor
+      position: relative
+
+    .price-mid
+      padding: 1.7rem 2.9rem
+      font-size: 3rem
+      +max(550)
+        font-size: 2.5rem
+        padding: 1.1rem 2rem
+
+    .price-small
+      font-size: 2rem
+      padding: .6rem 2rem
+      border: 2px solid currentColor
+
+    .dropdown
+      --dropdown-radius: 3rem
+      +max(550)
+        --dropdown-radius: 2.5rem
+
+      cursor: pointer
+      position: relative
+      border-radius: 50px
+      font-size: 2.7rem
+      min-width: 41rem
+      z-index: 5
+      +max(767)
+        order: 3
+        margin-left: 0
+
+      +max(550)
+        font-size: 2rem
+        min-width: 31rem
+
+      &.active
+        border-radius: var(--dropdown-radius) var(--dropdown-radius) 0 0
+        border-bottom-color: transparent
+        .option-box
+          visibility: visible
+          border-bottom-right-radius: var(--dropdown-radius)
+          border-bottom-left-radius: var(--dropdown-radius)
+
+        //&:after
+          height: 17.8rem
+          box-shadow: 2px 20px 25px -20px #706e6e
+          +max(767)
+            box-shadow: 0px 10px 30px -10px #282727
+
+      .text
+        z-index: 2
+        position: relative
+
+      .option-box
+        overflow: hidden
+        border: 2px solid currentColor
+        position: absolute
+        bottom: 0
+        width: calc(100% + 4px)
+        left: -2px
+        visibility: hidden
+        transform: translateY(100%)
+        display: flex
+        flex-direction: column
+        z-index: 3
+
+        .option
+          z-index: 3
+          padding: 1.7rem 2.9rem
+          background: $gray-light
+          border: px solid $gray-light
+          +max(550)
+            padding: 1.1rem 2rem
+
+          &:hover
+            background: $blue
+            color: $white
+
+      .icon
+        width: 3.5rem
+        height: 3.5rem
+        background: $white
+        border-radius: 50%
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 1.5rem
+        z-index: 2
+        +max(550)
+          width: 3rem
+          height: 3rem
+
+  .slider
+    margin-top: -12rem
+    padding-bottom: 4rem
+    .wrapper
+      +max(400)
+        width: calc(100% - 5rem)
+    .glide__track
+      +shadow-dark
+      padding-top: 5rem
+      position: relative
+      overflow: hidden
+
+    ul.glide__slides
+      overflow: hidden
+      display: flex
+      padding: 0
+      height: auto
+      margin-bottom: 0
+      margin-top: 0
+      list-style: none
+
+    .glide__bullets
+      text-align: center
+      display: flex
+      align-items: center
+      justify-content: center
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 5rem
+
+    .glide__bullet
+      background: 0
+      width: 15px
+      height: 15px
+      background: $blue
+      border: none
+      margin: 10px
+      border-radius: 50%
+      cursor: pointer
+
+      &--active
+        background: $green-dark
+
+    img
+      width: 100%
+      display: block
+
+  .tags
+    .label
+      margin: 2.5rem 1.5rem 0 1.5rem
+
+    .tag-row
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-wrap: wrap
+      width: calc(var(--wrapper) / 1.3)
+      margin: auto
+      +max(1200)
+        width: calc(var(--wrapper) / 1.05)
+      +max(550)
+        width: calc(100% - 5rem)
+
+    .tag
+      margin: 2.5rem 1.5rem 0 1.5rem
+      user-select: none
+      background: $gray-light
+      border-radius: 20rem
+      padding: calc(2rem / 3) 3rem
+      display: inline-block
+      border: 2px solid $gray-light
+
+      &.more
+        background: transparent
+        border-color: $gray-mid
+        cursor: pointer
+
+  .info
+    margin-top: 6rem
+    padding-bottom: 20rem
+    +max(767)
+      padding-bottom: 10rem
+    +max(550)
+      padding-bottom: 5rem
+      margin-top: 0
+
+    a
+      color: $green-dark
+      text-decoration: underline
+
+    .wrapper
+      width: calc(var(--wrapper) / 1.3)
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      margin: auto
+      align-items: stretch
+      +max(1200)
+        width: calc(var(--wrapper) / 1.1)
+      +max(991)
+        width: calc(var(--wrapper) / 1.05)
+
+    .column
+      margin-top: 8rem
+
+      &.column-big
+        width: calc(60% - 3rem)
+        +max(1200)
+          width: calc(65% - 3rem)
+        +max(767)
+          width: calc(60% - 5rem)
+        +max(550)
+          width: 100%
+
+      &.column-small
+        width: calc(40% - 7rem)
+        +max(1200)
+          width: calc(35% - 1rem)
+        +max(767)
+          width: 40%
+        +max(550)
+          width: 100%
+
+      &.column-arrow
+        display: flex
+        align-items: center
+        justify-content: center
+        +max(550)
+          padding: 2rem 0
+
+      &:first-child
+        .text
+          &:last-child
+            margin-top: 0
+
+    .heading
+      margin: 0 0 3rem 0
+      font-size: 4rem
+
+    .text
+      font-size: 2.1rem
+      margin-top: 3rem
+      line-height: 1.3em
+      +max(991)
+        font-size: 1.9rem
+
+    .tag
+      margin: 2rem 0 0 0
+      user-select: none
+      border-radius: 20rem
+      padding: 1rem 2rem
+      display: inline-block
+      color: $white
+      font-size: 2.2rem
+      font-weight: 500
+      text-align: center
+      +max(991)
+        font-size: 2rem
+
+      &:first-of-type
+        margin-top: 0
+
+      &.green
+        background: $green-dark
+
+      &.red
+        background: $red-light
+
+
+

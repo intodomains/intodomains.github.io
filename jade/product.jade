@@ -1,0 +1,15 @@
+include templates/_mixins
+extends templates/_layout
+
+block config
+  - var pageTitle = 'Product'
+
+block main
+  main.product
+    include templates/product/_section-hero-product
+    include templates/product/_section-slider-product
+    include templates/product/_section-tags-product
+    include templates/product/_section-info-product
+
+block scripts-bottom
+  script(src="js/index.js")

@@ -1,0 +1,18 @@
+include _inline-svg
+
+mixin logo-block(param)
+  div(class="logo-block #{param.style}")
+    .logo
+      +logo-svg
+
+    if(param.mail === true)
+      .mail
+        +mail-svg
+
+    if (param.buy === true)
+      .buy
+        span
+          | buy
+        span.mobile
+          | now
+

@@ -1,0 +1,41 @@
+section.form
+  .wrapper
+    h2.form__title
+      | Let's get into it.
+    form(class="form__form" action="" method="")
+      input(type="text" class="form__input form__input--company" placeholder="Company")
+      input(type="text" class="form__input form__input--name form__important" placeholder="Your Name")
+      input(type="email" class="form__input form__input--email form__important" placeholder="Email Address" required)
+      .form__row.form__row--heading
+        h3.form__heading
+          | Interested in:
+      .form__row.form__row--checkbox
+        label(class="form__checkbox")
+          input(type="checkbox")
+          span.text
+            | Buying
+          span.text-invisible
+            | Buying
+        label(class="form__checkbox")
+          input(type="checkbox")
+          span.text
+            | Collaboration
+          span.text-invisible
+            | Collaboration
+        label(class="form__checkbox")
+          input(type="checkbox")
+          span.text-invisible
+            | Tasking
+          span.text
+            | Tasking
+        label(class="form__checkbox")
+          input(type="checkbox")
+          span.text
+            | Other
+          span.text-invisible
+            | Other
+      .form__row.form__row--message
+        textarea(class="form__message form__important" placeholder="a message" required)
+      .form__row.form__row--submit
+        button.form__button(type="submit")
+          | Send
