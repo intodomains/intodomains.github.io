@@ -168,6 +168,9 @@
         transform: translateY(-50%)
         right: 1.5rem
         z-index: 2
+        display: flex
+        align-items: center
+        justify-content: center
         +max(550)
           width: 3rem
           height: 3rem
@@ -179,19 +182,29 @@
       +max(400)
         width: calc(100% - 5rem)
     .glide__track
-      +shadow-dark
+
       padding-top: 5rem
       position: relative
-      overflow: hidden
+      //overflow: hidden
 
     ul.glide__slides
-      overflow: hidden
       display: flex
       padding: 0
       height: auto
       margin-bottom: 0
       margin-top: 0
       list-style: none
+      overflow: visible
+
+    .glide__slide
+      cursor: grab
+      width: 100% !important
+      img
+        +shadow-dark
+        margin: auto
+        width: var(--wrapper) !important
+
+
 
     .glide__bullets
       text-align: center

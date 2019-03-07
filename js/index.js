@@ -153,7 +153,8 @@ if (glide) {
   new Glide('.glide', {
     type: 'slider',
     startAt: 0,
-    perView: 1
+    perView: 1,
+    rewindDuration: 333
   }).mount();
 }
 
