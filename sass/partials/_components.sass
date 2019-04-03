@@ -56,13 +56,29 @@
   +m(home)
     width: 12.5rem
     height: 12.5rem
-    line
-      fill: $white
+    opacity: 0.5
+    transition: .3s ease all
+    circle,
+    line,
+    polyline
+      stroke: $white
+
+    &:hover
+      opacity: 1
+
   +m(product)
     width: 12.5rem
     height: 12.5rem
+
     circle,
     line,
     polyline
       stroke: $gray-mid
+      transition: .3s ease all
+
+    &:hover
+      circle,
+      line,
+      polyline
+        stroke: $blue
 

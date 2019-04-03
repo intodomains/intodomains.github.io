@@ -2,7 +2,7 @@ include _inline-svg
 
 mixin logo-block(param)
   div(class="logo-block #{param.style}")
-    .logo
+    a.logo(href="/")
       +logo-svg
 
     if(param.mail === true)

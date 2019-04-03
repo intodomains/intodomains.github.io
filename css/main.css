@@ -135,16 +135,29 @@ section {
   cursor: pointer; }
   .arrow--home {
     width: 12.5rem;
-    height: 12.5rem; }
-    .arrow--home line {
-      fill: #fff; }
+    height: 12.5rem;
+    opacity: 0.5;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all; }
+    .arrow--home circle,
+    .arrow--home line,
+    .arrow--home polyline {
+      stroke: #fff; }
+    .arrow--home:hover {
+      opacity: 1; }
   .arrow--product {
     width: 12.5rem;
     height: 12.5rem; }
     .arrow--product circle,
     .arrow--product line,
     .arrow--product polyline {
-      stroke: #CCCCCC; }
+      stroke: #CCCCCC;
+      -webkit-transition: .3s ease all;
+      transition: .3s ease all; }
+    .arrow--product:hover circle,
+    .arrow--product:hover line,
+    .arrow--product:hover polyline {
+      stroke: #4c4de7; }
 
 .index .hero {
   background: #f7f7f7;
@@ -259,6 +272,9 @@ section {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between; }
+      @media (max-width: 370px) {
+        .index .hero form .input-wrapper {
+          padding-left: 1em; } }
       .index .hero form .input-wrapper:focus-within, .index .hero form .input-wrapper:hover {
         -webkit-box-shadow: 2px 20px 25px -20px #c1b9b9;
                 box-shadow: 2px 20px 25px -20px #c1b9b9; }
@@ -267,13 +283,17 @@ section {
       border: none;
       line-height: 0;
       font-size: 2.5em;
-      padding-left: 1em;
-      padding-right: 2.5em;
-      margin-right: 2.5em;
+      padding-left: 2.5rem;
+      padding-right: 4rem;
       padding-bottom: 0.1em;
       width: 100%;
       border-radius: 50px;
-      background: #fff; }
+      background: #fff;
+      min-width: 0; }
+      @media (max-width: 370px) {
+        .index .hero form input {
+          padding-left: 1em;
+          padding-right: 1em; } }
       .index .hero form input::selection {
         background: #4c4de7;
         color: #fff; }
@@ -851,7 +871,7 @@ section {
         position: absolute;
         bottom: 0;
         right: 0;
-        border-width: 5px;
+        border-width: 10px;
         border-style: solid;
         border-color: #abb9cb;
         border-top-color: transparent;
@@ -944,8 +964,7 @@ section {
     font-family: "Montserrat", sans-serif;
     padding: 1.5rem 4.5rem 1.5rem 1.5rem;
     display: block;
-    overflow: visible;
-    height: auto !important; }
+    overflow: visible; }
   .form__important {
     background-image: url("../img/contact-important.svg");
     background-repeat: no-repeat;

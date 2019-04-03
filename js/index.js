@@ -168,7 +168,7 @@ if (dropdown) {
       dropdown.classList.remove('active');
     }
   });
-  dropdown.addEventListener('click', () => {
+  dropdown.addEventListener('click', (event) => {
     event.stopPropagation();
     dropdown.classList.toggle('active');
   });

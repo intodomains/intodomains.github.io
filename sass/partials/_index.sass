@@ -84,6 +84,8 @@
         border-radius: 50px
         display: flex
         justify-content: space-between
+        +max(370)
+          padding-left: 1em
 
         &:focus-within,
         &:hover
@@ -94,13 +96,16 @@
         border: none
         line-height: 0
         font-size: 2.5em
-        padding-left: 1em
-        padding-right: 2.5em
-        margin-right: 2.5em
+        padding-left: 2.5rem
+        padding-right: 4rem
         padding-bottom: 0.1em
         width: 100%
         border-radius: 50px
         background: #fff
+        min-width: 0
+        +max(370)
+          padding-left: 1em
+          padding-right: 1em
 
         &::selection
           background: $blue
@@ -125,7 +130,9 @@
     padding-top: 10rem
     padding-bottom: 20rem
     +max(776)
+      //
       padding-bottom: 10rem
+
 
     .column
       width: 88rem
@@ -139,7 +146,6 @@
       +max(650)
         width: calc(100% - 10rem)
         padding-right: 0
-
 
     .heading
       margin-top: 10rem
@@ -176,6 +182,7 @@
         opacity: 1
 
     .column-left
+      //
       width: 60%
 
     .column-right
