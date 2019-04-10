@@ -1,12 +1,12 @@
 section.hero
   .wrapper
-    +logo-block({style: 'logo-block--dark logo-block--wrapper', buy: true})
+    +logo-block()(style='logo-block--dark logo-block--wrapper', mail=1)
     h1.title
       .upper-part
         span.dn-sm
           | Welcome to&nbsp;
         strong
-          | xtery.com&nbsp; #{Test1}
+          | #{domainName}
 
       .bottom-part
         | this domain and logo are for sale
@@ -14,7 +14,7 @@ section.hero
       .dropdown.price-item.price-mid
         .text
           | domain + logo concept
-        img.icon(src="img/down.svg")
+        img.icon(src="/img/down.svg")
         .option-box
           .option
             | domain
@@ -23,16 +23,16 @@ section.hero
 
       .divider.divider-small
       .price.price-item.price-mid
-        | = $ 3,000
+        | = $ #{todayPrice}
         .year
           | TODAY PRICE
       .divider.divider-normal.dn-md
       .price.price-item.price-small.dn-md
-        | ≥ $ 6,000
+        | ≥ $ #{oneYearPrice}
         .year
           | 2019
       .divider.divider-normal.dn-lg
       .price.price-item.price-small.dn-lg
-        | ≥ $ 7,000
+        | ≥ $ #{twoYearPrice}
         .year
           | 2020

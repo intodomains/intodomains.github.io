@@ -6,8 +6,8 @@ block config
 
 block main
   main.contact-page
-    +logo-block({style: 'logo-block--dark', mail: false})
+    +logo-block()(style='logo-block--dark', mail=1)
     include templates/_form
 
 block scripts-bottom
-  script(src="js/index.js")
+  script(src="/js/index.js")

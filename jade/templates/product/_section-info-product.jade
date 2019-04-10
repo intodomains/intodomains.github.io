@@ -29,20 +29,17 @@ section.info
 
         a(href="www.yandex.ru")
           | MarkForge.com
+
     .column.column-small
       h2.heading
         | Clarity
-      .tag.green
-        | easy to pronounce
-      br
-      .tag.green
-        | short
-      br
-      .tag.green
-        | easy to remember
-      br
-      .tag.red
-        | how to write?
+      each val in clarityPluses
+        .tag.green
+          | #{val}
+        br
+      each val in clarityMinuses
+        .tag.red
+          | how to write?
 
     .column.column-big
       h2.heading

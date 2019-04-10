@@ -1,15 +1,15 @@
 include _inline-svg
 
-mixin logo-block(param)
-  div(class="logo-block #{param.style}")
+mixin logo-block()
+  div(class="logo-block #{attributes.style}")
     a.logo(href="/")
       +logo-svg
 
-    if(param.mail === true)
+    if attributes.mail
       .mail
         +mail-svg
 
-    if (param.buy === true)
+    if attributes.buy
       .buy
         span
           | buy&nbsp;

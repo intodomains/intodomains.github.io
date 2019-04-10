@@ -3,6 +3,13 @@ extends templates/_layout
 
 block config
   - var pageTitle = 'Product'
+  - var domainName = 'xtery.com '
+  - var todayPrice = '3,000'
+  - var oneYearPrice = '6,000'
+  - var twoYearPrice = '7,000'
+  - var tags = ['neologism','crypto','domain','x','connection','nodes']
+  - var clarityPluses = ['easy to pronounce','short','easy to remember']
+  - var clarityMinuses = ['how to write?']
 
 block main
   main.product
@@ -12,4 +19,4 @@ block main
     include templates/product/_section-info-product
 
 block scripts-bottom
-  script(src="js/index.js")
+  script(src="/js/index.js")
